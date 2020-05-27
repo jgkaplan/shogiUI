@@ -125,8 +125,8 @@ export function configure(state: State, config: Config): void {
     king = state.pieces[kingStartPos];
     if (!dests || !king || king.role !== 'king') return;
     state.movable.dests[kingStartPos] = dests.filter(d =>
-      !((d === 'a' + rank) && dests.indexOf('c' + rank as cg.Key) !== -1) &&
-        !((d === 'h' + rank) && dests.indexOf('g' + rank as cg.Key) !== -1)
+      !((d === '1' + rank) && dests.indexOf('3' + rank as cg.Key) !== -1) &&
+        !((d === '9' + rank) && dests.indexOf('7' + rank as cg.Key) !== -1)
     );
   }
 };

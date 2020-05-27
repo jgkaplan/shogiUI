@@ -35,7 +35,7 @@ export function bindDocument(s: State, redrawAll: cg.Redraw): cg.Unbind {
       s.dom.bounds.clear();
       requestAnimationFrame(redrawAll);
     };
-    unbinds.push(unbindable(document.body, 'chessground.resize', onResize));
+    unbinds.push(unbindable(document.body, 'shogiground.resize', onResize));
   }
 
   if (!s.viewOnly) {

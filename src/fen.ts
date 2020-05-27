@@ -1,16 +1,16 @@
 import { pos2key, invRanks } from './util'
 import * as cg from './types'
 
-export const initial: cg.FEN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR';
+export const initial: cg.FEN = 'lnsgkgsnl/1b5r1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL';
 
-const roles: { [letter: string]: cg.Role } = { p: 'pawn', r: 'rook', n: 'knight', b: 'bishop', q: 'queen', k: 'king' };
+const roles: { [letter: string]: cg.Role } = { p: 'pawn', r: 'rook', n: 'knight', b: 'bishop', g: 'gold', l: 'lance', s: 'silver', k: 'king' };
 
-const letters = { pawn: 'p', rook: 'r', knight: 'n', bishop: 'b', queen: 'q', king: 'k' };
+const letters = { pawn: 'p', lance: 'l', rook: 'r', knight: 'n', bishop: 'b', gold: 'g', silver: 's', king: 'k' };
 
 export function read(fen: cg.FEN): cg.Pieces {
   if (fen === 'start') fen = initial;
   const pieces: cg.Pieces = {};
-  let row = 8, col = 0;
+  let row = 9, col = 0;
   for (const c of fen) {
     switch (c) {
       case ' ': return pieces;

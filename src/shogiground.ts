@@ -8,7 +8,7 @@ import render from './render';
 import * as svg from './svg';
 import * as util from './util';
 
-export function Chessground(element: HTMLElement, config?: Config): Api {
+export function Shogiground(element: HTMLElement, config?: Config): Api {
 
   const state = defaults() as State;
 

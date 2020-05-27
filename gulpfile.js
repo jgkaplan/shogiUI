@@ -19,7 +19,7 @@ const destination = () => gulp.dest('./dist');
 const prod = () => browserify(browserifyOpts(false))
   .plugin(tsify)
   .bundle()
-  .pipe(source('chessground.min.js'))
+  .pipe(source('shogiground.min.js'))
   .pipe(buffer())
   .pipe(terser({safari10: true}))
   .pipe(size())
@@ -28,7 +28,7 @@ const prod = () => browserify(browserifyOpts(false))
 const dev = () => browserify(browserifyOpts(true))
   .plugin(tsify)
   .bundle()
-  .pipe(source('chessground.js'))
+  .pipe(source('shogiground.js'))
   .pipe(destination());
 
 const watch = () => {
@@ -36,7 +36,7 @@ const watch = () => {
   const bundle = () => bundler
     .bundle()
     .on('error', error => logger.error(colors.red(error.message)))
-    .pipe(source('chessground.js'))
+    .pipe(source('shogiground.js'))
     .pipe(destination());
 
   const bundler = watchify(

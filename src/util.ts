@@ -2,13 +2,13 @@ import * as cg from './types';
 
 export const colors: cg.Color[] = ['white', 'black'];
 
-export const invRanks: cg.Rank[] = [8, 7, 6, 5, 4, 3, 2, 1];
+export const invRanks: cg.Rank[] = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 
 export const allKeys: cg.Key[] = Array.prototype.concat(...cg.files.map(c => cg.ranks.map(r => c+r)));
 
-export const pos2key = (pos: cg.Pos): cg.Key => allKeys[8 * pos[0] + pos[1] - 9];
+export const pos2key = (pos: cg.Pos): cg.Key => allKeys[9 * pos[0] + pos[1] - 10];
 
-export const key2pos = (k: cg.Key): cg.Pos => [k.charCodeAt(0) - 96, k.charCodeAt(1) - 48] as cg.Pos;
+export const key2pos = (k: cg.Key): cg.Pos => [k.charCodeAt(0) - 48, k.charCodeAt(1) - 48] as cg.Pos;
 
 export function memo<A>(f: () => A): cg.Memo<A> {
   let v: A | undefined;
@@ -49,13 +49,13 @@ export const samePiece: (p1: cg.Piece, p2: cg.Piece) => boolean = (p1, p2) =>
 
 const posToTranslateBase: (pos: cg.Pos, asWhite: boolean, xFactor: number, yFactor: number) => cg.NumberPair =
 (pos, asWhite, xFactor, yFactor) => [
-  (asWhite ? pos[0] - 1 : 8 - pos[0]) * xFactor,
-  (asWhite ? 8 - pos[1] : pos[1] - 1) * yFactor
+  (asWhite ? pos[0] - 1 : 9 - pos[0]) * xFactor,
+  (asWhite ? 9 - pos[1] : pos[1] - 1) * yFactor
 ];
 
 export const posToTranslateAbs = (bounds: ClientRect) => {
-  const xFactor = bounds.width / 8,
-  yFactor = bounds.height / 8;
+  const xFactor = bounds.width / 9,
+  yFactor = bounds.height / 9;
   return (pos: cg.Pos, asWhite: boolean) => posToTranslateBase(pos, asWhite, xFactor, yFactor);
 };
 

@@ -105,7 +105,7 @@ export function defaults(): Partial<State> {
     orientation: 'white',
     turnColor: 'white',
     coordinates: true,
-    autoCastle: true,
+    autoCastle: false,
     viewOnly: false,
     disableContextMenu: false,
     resizable: true,
@@ -124,12 +124,12 @@ export function defaults(): Partial<State> {
       color: 'both',
       showDests: true,
       events: {},
-      rookCastle: true
+      rookCastle: false
     },
     premovable: {
       enabled: true,
       showDests: true,
-      castle: true,
+      castle: false,
       events: {}
     },
     predroppable: {
@@ -173,7 +173,7 @@ export function defaults(): Partial<State> {
         paleGrey: { key: 'pgr', color: '#4a4a4a', opacity: 0.35, lineWidth: 15 }
       },
       pieces: {
-        baseUrl: 'https://lichess1.org/assets/piece/cburnett/'
+        baseUrl: '/static/pieces/'
       },
       prevSvgHash: ''
     },

@@ -89,7 +89,7 @@ export function start(s: State, e: cg.MouchEvent): void {
 export function pieceCloseTo(s: State, pos: cg.NumberPair): boolean {
   const asWhite = board.whitePov(s),
   bounds = s.dom.bounds(),
-  radiusSq = Math.pow(bounds.width / 8, 2);
+  radiusSq = Math.pow(bounds.width / 9, 2);
   for (const key in s.pieces) {
     const squareBounds = computeSquareBounds(key as cg.Key, asWhite, bounds),
     center: cg.NumberPair = [
@@ -103,7 +103,7 @@ export function pieceCloseTo(s: State, pos: cg.NumberPair): boolean {
 
 export function dragNewPiece(s: State, piece: cg.Piece, e: cg.MouchEvent, force?: boolean): void {
 
-  const key: cg.Key = 'a0';
+  const key: cg.Key = '11';
 
   s.pieces[key] = piece;
 
@@ -115,8 +115,8 @@ export function dragNewPiece(s: State, piece: cg.Piece, e: cg.MouchEvent, force?
   squareBounds = computeSquareBounds(key, asWhite, bounds);
 
   const rel: cg.NumberPair = [
-    (asWhite ? 0 : 7) * squareBounds.width + bounds.left,
-    (asWhite ? 8 : -1) * squareBounds.height + bounds.top
+    (asWhite ? 0 : 8) * squareBounds.width + bounds.left,
+    (asWhite ? 9 : -1) * squareBounds.height + bounds.top
   ];
 
   s.draggable.current = {
@@ -238,14 +238,14 @@ function removeDragElements(s: State): void {
 function computeSquareBounds(key: cg.Key, asWhite: boolean, bounds: ClientRect): cg.Rect {
   const pos = util.key2pos(key);
   if (!asWhite) {
-    pos[0] = 9 - pos[0];
-    pos[1] = 9 - pos[1];
+    pos[0] = 10 - pos[0];
+    pos[1] = 10 - pos[1];
   }
   return {
-    left: bounds.left + bounds.width * (pos[0] - 1) / 8,
-    top: bounds.top + bounds.height * (8 - pos[1]) / 8,
-    width: bounds.width / 8,
-    height: bounds.height / 8
+    left: bounds.left + bounds.width * (pos[0] - 1) / 9,
+    top: bounds.top + bounds.height * (9 - pos[1]) / 9,
+    width: bounds.width / 9,
+    height: bounds.height / 9
   };
 }
 
