@@ -1,9 +1,9 @@
 {
-  "name": "chessground",
-  "version": "7.6.12",
-  "description": "lichess.org chess ui",
-  "main": "chessground.js",
-  "typings": "chessground.d.ts",
+  "name": "shogiground",
+  "version": "1.0.0",
+  "description": "lichess.org inspired shogi ui",
+  "main": "shogiground.js",
+  "typings": "shogiground.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.27.0",
@@ -30,7 +30,7 @@
     "*.js",
     "*.d.ts"
   ],
-  "repository": "https://github.com/ornicar/chessground",
+  "repository": "https://github.com/jgkaplan/shogiground",
   "keywords": [
     "chess",
     "lichess",
@@ -39,9 +39,5 @@
     "ui",
     "typescript"
   ],
-  "author": "Thibault Duplessis (https://github.com/ornicar)",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/ornicar/chessground/issues"
-  }
+  "license": "GPL-3.0"
 }

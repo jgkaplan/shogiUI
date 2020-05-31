@@ -103,7 +103,7 @@ export function pieceCloseTo(s: State, pos: cg.NumberPair): boolean {
 
 export function dragNewPiece(s: State, piece: cg.Piece, e: cg.MouchEvent, force?: boolean): void {
 
-  const key: cg.Key = '11';
+  const key: cg.Key = '10';
 
   s.pieces[key] = piece;
 

@@ -6,9 +6,9 @@ export const invRanks: cg.Rank[] = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 
 export const allKeys: cg.Key[] = Array.prototype.concat(...cg.files.map(c => cg.ranks.map(r => c+r)));
 
-export const pos2key = (pos: cg.Pos): cg.Key => allKeys[9 * pos[0] + pos[1] - 10];
+export const pos2key = (pos: cg.Pos): cg.Key => pos[0].toString() + pos[1].toString() as cg.Key; //allKeys[9 * pos[0] + pos[1] - 10];
 
-export const key2pos = (k: cg.Key): cg.Pos => [k.charCodeAt(0) - 48, k.charCodeAt(1) - 48] as cg.Pos;
+export const key2pos = (k: cg.Key): cg.Pos => [parseInt(k[0]), parseInt(k[1])] as cg.Pos;
 
 export function memo<A>(f: () => A): cg.Memo<A> {
   let v: A | undefined;

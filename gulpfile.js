@@ -11,7 +11,7 @@ const tsify = require('tsify');
 
 const browserifyOpts = (debug) => ({
   entries: ['src/index.js'],
-  standalone: 'Chessground',
+  standalone: 'Shogiground',
   debug: debug
 });
 const destination = () => gulp.dest('./dist');

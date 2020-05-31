@@ -1,0 +1,57 @@
+/*
+ * Board
+ */
+.cg-wrap {
+  background-image: url('images/board/dark.svg');
+  background-size: cover;
+}
+
+.cg-wrap piece.white.pawn {
+  background-image: url('images/pieces/shogi/wP.png');
+}
+.cg-wrap piece.white.bishop {
+  background-image: url('images/pieces/shogi/wB.png');
+}
+.cg-wrap piece.white.knight {
+  background-image: url('images/pieces/shogi/wN.png');
+}
+.cg-wrap piece.white.rook {
+  background-image: url('images/pieces/shogi/wR.png');
+}
+.cg-wrap piece.white.gold {
+  background-image: url('images/pieces/shogi/wG.png');
+}
+.cg-wrap piece.white.king {
+  background-image: url('images/pieces/shogi/wK.png');
+}
+.cg-wrap piece.white.silver {
+  background-image: url('images/pieces/shogi/wS.png');
+}
+.cg-wrap piece.white.lance {
+  background-image: url('images/pieces/shogi/wL.png');
+}
+
+.cg-wrap piece.black.pawn {
+  background-image: url('images/pieces/shogi/bP.png');
+}
+.cg-wrap piece.black.bishop {
+  background-image: url('images/pieces/shogi/bB.png');
+}
+.cg-wrap piece.black.knight {
+  background-image: url('images/pieces/shogi/bN.png');
+}
+.cg-wrap piece.black.rook {
+  background-image: url('images/pieces/shogi/bR.png');
+}
+.cg-wrap piece.black.gold {
+  background-image: url('images/pieces/shogi/bG.png');
+}
+.cg-wrap piece.black.king {
+  background-image: url('images/pieces/shogi/bK.png');
+}
+.cg-wrap piece.black.silver {
+  background-image: url('images/pieces/shogi/bS.png');
+}
+.cg-wrap piece.black.lance {
+  background-image: url('images/pieces/shogi/bL.png');
+}
